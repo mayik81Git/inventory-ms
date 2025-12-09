@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: inventory-ms-service
+spec:
+  selector:
+    app: inventory-ms # Debe coincidir con el label del Deployment
+  ports:
+    - protocol: TCP
+      port: 80 # Puerto del Service
+      targetPort: 8084 # Puerto real de la aplicación
